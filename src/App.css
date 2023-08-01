@@ -1,38 +1,373 @@
-.App {
-  text-align: center;
+body{
+  width: 100%;
+  height: 100vh;
 }
+#l{
+  color: red;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.body{
+  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body .container{
+  width: 60%;
+  height: 89%;
+  padding: 30px;
+}
+.container .form{
+  width: 100%;
+  height: 30px;
+  
+}
+.form input{
+  height: 30px;
+  width: 100%;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 4px;
+}
+.data{
+  width: 100%;
+  height: 96%;
+  
+  margin-top: 20px;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+}
+.item{
+  
+  width: 97%;
+  height: fit-content;
+  border-radius: 8px;
+  border: 1px solid black;
+  margin: 10px 0px;
+  padding: 5px;
+  transition: height 5s;
+}
+.item .normal{
+  width: 100%;
+  height: 100%;
+  
+  padding:3px 10px ;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.item .normal img{
+  border-radius: 180px;
+border: 1px solid black;
+}
+.item .normal span{
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  width: 90%;
+}
+.item .normal span h3{
+  float: left;
+
+}
+.item .normal span button{
+  outline: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+
+.item .full{
+  
+  width: 100%;
+  height: fit-content;
+  
+  padding:3px 10px ;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.item .full #s1{
+  display: flex;
+  flex-direction: row;
+}
+.item .full #s1 img{
+  border-radius: 180px;
+border: 1px solid black;
+}
+.item .full #s1 span{
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  width: 90%;
+}
+.item .full #s1 span h3{
+  float: left;
+
+}
+.item .full #s1 span button{
+  outline: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.item .full #s2,#s3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 8px;
+  padding: 5px;
+}
+.item .full #s2 span h5{
+  margin-bottom: 3px;
+}
+#s3{
+  flex-direction: column;
+  padding-right: 2px;
+}
+#s3 h5{
+  margin-bottom: 3px;
+}
+#s4{
+  display: flex;
+  justify-content: right;
+  align-items:end;
+  padding: 5px 10px;
+}
+
+#s4 span #d,#e{
+  outline: none;
+  border: none;
+  background-color: inherit;
+  margin: 2px 4px;
+  cursor: pointer;
+}
+#s4 span #d{
+  color: red;
+}
+#s4 span #e{
+  color: dodgerblue;
+}
+#s4 span #e:disabled{
+  color: #555;
+  cursor: not-allowed;
+}
+
+
+
+
+
+.delete{
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: rgba(0,0,0,0.55);
+}
+.delete .ddiv{
+  width: 620px;
+  height: 135px;
+  background-color:#fff;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.ddiv #ds1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+
+}
+#ds1 button{
+  outline: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  font-size: medium;
+  padding: 3px 7px;
+}
+#ds1 button:hover{
+  background-color: red;
+  color: #fff;
+}
+.ddiv #ds2{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: baseline;
+  margin: 5px;
+  margin-top: 20px;
+  
+
+}
+#ds2 button{
+  
+  border: 1px solid black;
+  background-color: inherit;
+  cursor: pointer;
+ border-radius: 8px;
+  padding: 5px 10px;
+  margin: 5px;
+}
+#ds2 button:nth-child(2){
+  background-color: red;
+  color: #fff;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+
+.item .edit{
+  
+  width: 100%;
+  height: fit-content;
+  
+  padding:3px 10px ;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.item .edit input,select,textarea{
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black;
+  height: 25px;
+  padding: 3px;
+  width: fit-content;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item .edit #s1{
+  display: flex;
+  flex-direction: row;
+}
+.item .edit #s1 img{
+  border-radius: 180px;
+border: 1px solid black;
+}
+.item .edit #s1 span{
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  width: 90%;
+}
+#name{
+  float: left;
+  width:130px;
+  padding: 7px;
+  font-size: large;
+  border-radius: 10px;
+  
+
+}
+.item .edit #s1 span button{
+  outline: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.item .edit #s2,#es3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 8px;
+  padding: 5px;
+}
+.item .edit #s2 span h5{
+  margin-bottom: 3px;
+}
+.edit #es3{
+  flex-direction: column;
+  padding-right: 2px;
+}
+.edit #es3 h5{
+  margin-bottom: 3px;
+}
+.edit #es3 textarea{
+  width: auto;
+  height: fit-content;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.edit #s4{
+  display: flex;
+  justify-content: right;
+  align-items:end;
+  padding: 5px 10px;
+}
+
+.edit #s4 span #d,#e{
+  outline: none;
+  border: none;
+  background-color: inherit;
+  margin: 2px 4px;
+  cursor: pointer;
+}
+.edit #s4 span #d{
+  color: red;
+}
+.edit #s4 span #e{
+  color: green;
+}
+.edit #s4 span #e:disabled{
+  color: #555;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
